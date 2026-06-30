@@ -478,3 +478,36 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+
+.branch-container {
+  display: flex; 
+  gap: 20px; 
+  justify-content: center; 
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .why-section {
+    padding: 40px 16px;
+  }
+  
+  .architecture-flow {
+    padding: 24px 16px;
+    width: 100%;
+  }
+
+  .branch-container {
+    flex-direction: column; 
+    align-items: center;
+    gap: 12px;
+  }
+
+  .flow-step {
+    min-width: unset;
+    width: 100%; 
+    max-width: 280px;
+  }
+}
