@@ -318,3 +318,163 @@ footer {
   background: #880101;
   border-radius: 0 0 4px 4px;
 }
+
+/*   /*
+/* Why Section Styling */
+.why-section {
+  padding: 80px 20px; 
+  background-color: var(--bg-alt-color, #000000); 
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    linear-gradient(
+      110deg,
+      #0a0a0a 0%,
+      #c50000 25%,
+      #ff6f3c 50%,
+      #c50000 75%,
+      #fffefe 45%
+    ),
+    linear-gradient(
+      70deg,
+      #0a0a0a 45%,
+      #ff4500 20%,
+      #b30000 50%,
+      #ff6f3c 80%,
+      #0a0a0a 100%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(255, 140, 0, 0.1) 0%,
+      transparent 70%
+    );
+
+  background-blend-mode: normal, overlay, overlay, normal;
+  color: #e0ffe5;
+  min-height: 100vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-intro blockquote {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  color: var(--accent-color, #00ffcc); 
+  border: none;
+  line-height: 1.5;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .pipeline-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pipeline-card {
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(12px); 
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); 
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-2px); 
+  background: rgba(255, 255, 255, 0.06); 
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pipeline-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.problem-card h3 {
+  color: #ff5555; 
+}
+
+.solution-card h3 {
+  color: #50fa7b; 
+}
+
+.pipeline-card p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Architecture Flow Diagram */
+.architecture-flow {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  max-width: 950px; 
+  margin: 0 auto;
+}
+
+.architecture-flow h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.ascii-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+}
+
+.flow-step {
+  padding: 12px 20px; 
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  border-radius: 6px;
+  min-width: 260px;
+  font-size: 0.95rem;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.flow-step:hover:not(.highlighted-step) {
+  background: rgba(255, 255, 255, 0.1); 
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.highlighted-step {
+  background: rgba(0, 51, 34, 0.8);
+  border-color: #00ffcc;
+  color: #00ffcc;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.15); 
+}
+
+.flow-arrow {
+  margin: 10px 0;
+  color: #ff5555; 
+  font-size: 1.2rem;
+  font-weight: bold;
+}

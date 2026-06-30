@@ -58,17 +58,51 @@
             >Download</a
           >
           <a href="#ecosystem">Ecosystem</a>
-          <a href="#gallery">Gallery</a>
+          <a href="#gallery">Features</a>
         </div>
       </div>
     </section>
+
+   <section id="why" class="why-section">
+  <div class="container">
+    <div class="why-intro">
+    </div>
+
+    <div class="pipeline-grid">
+      <div class="pipeline-card problem-card">
+        <h3>The Problem</h3>
+        <p>G-code isn't expressive, and printer macros are locked to one firmware. If you run both Klipper and Marlin printers, your automation logic has to be written and maintained twice.</p>
+      </div>
+      
+      <div class="pipeline-card solution-card">
+        <h3>The Solution</h3>
+        <p>Write your machine logic once in Bellerophon (.bph). The compiler handles the translation to whatever firmware you're targeting, so the source stays the same even when the hardware doesn't.</p>
+      </div>
+    </div>
+
+    <div class="architecture-flow">
+      <h3>The Pipeline</h3>
+      <div class="ascii-flow">
+        <div class="flow-step highlighted-step">Bellerophon Script (.bph)</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Dimidium Compiler Engine</div>
+        <div class="flow-arrow">↓</div>
+        <div class="branch-container" style="display: flex; gap: 20px; justify-content: center; margin-top: 10px;">
+          <div class="flow-step">Klipper Target (.cfg)</div>
+          <div class="flow-step">Marlin Target (.gcode)</div>
+          <div class="flow-step future-step">Future Adapters</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="ecosystem" class="ecosystem">
       <div class="container">
         <h2 class="section-title">What is the Dimidium Ecosystem?</h2>
 
         <div class="features-grid">
-    <div class="feature-card">
+          <div class="feature-card">
             <h3>Core Compiler Engine</h3>
             <p>
               A hardware-agnostic compiler that turns one Bellerophon (.bph) script
@@ -77,19 +111,20 @@
           </div>
 
           <div class="feature-card">
-  <h3>Bellerophon IDE</h3>
-  <p>
-    Real-time syntax validation, live error feedback, a theme engine,
-    and hardware boundary profiles that catch bad moves before they print.
-  </p>
-</div>
-<div class="feature-card">
-  <h3>Extensible Target Architecture</h3>
-  <p>
-    Klipper (.cfg) and Marlin (.gcode) out of the box, built on a modular
-    pipeline so new firmware targets can be added without touching your scripts.
-  </p>
-</div>
+            <h3>Bellerophon IDE</h3>
+            <p>
+              Real-time syntax validation, live error feedback, a theme engine,
+              and hardware boundary profiles that catch bad moves before they print.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>Extensible Target Architecture</h3>
+            <p>
+              Klipper (.cfg) and Marlin (.gcode) out of the box, built on a modular
+              pipeline so new firmware targets can be added without touching your scripts.
+            </p>
+          </div>
         </div>
 
         <p class="eco-bonus">
@@ -101,7 +136,7 @@
 
     <section id="gallery" class="gallery">
       <div class="container">
-        <h2 class="section-title">Gallery</h2>
+        <h2 class="section-title">Features</h2>
         <div class="gallery-grid">
           <div class="gallery-item">
             <img
@@ -172,4 +207,3 @@
       </div>
     </footer>
   </body>
-</html>
